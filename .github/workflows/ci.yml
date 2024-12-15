@@ -22,6 +22,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '21'
+          distribution: 'temurin'  # Agrega esta línea
 
       # 3. Configurar caché para Maven
       - name: Cache Maven dependencies
@@ -45,4 +46,3 @@ jobs:
         run: mvn test
         env:
           SPRING_PROFILES_ACTIVE: dev
-
