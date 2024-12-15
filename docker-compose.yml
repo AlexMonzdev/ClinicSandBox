@@ -5,7 +5,7 @@ services:
     image: postgres:15
     container_name: postgres-container
     environment:
-      POSTGRES_USER: clinicDB
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: clinicDB
     ports:

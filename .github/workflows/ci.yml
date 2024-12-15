@@ -3,10 +3,10 @@ name: CI - Spring Boot
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -22,7 +22,6 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '21'
-          distribution: 'temurin'
 
       # 3. Configurar caché para Maven
       - name: Cache Maven dependencies
