@@ -25,30 +25,30 @@ public class AppointmentsController {
 
     }
 
-    @GetMapping("/appointments")
+    @GetMapping("/appt")
     public ResponseEntity<List<AppointmentResponseDTO>> getAllAppointments() {
         return ResponseEntity.ok(appointmentServices.getAllAppointments());
     }
 
-    @GetMapping("/appointments/{id}")
+    @GetMapping("/appt/{id}")
     public ResponseEntity<AppointmentResponseDTO> getAppointmentById(@PathVariable Long id) {
         AppointmentResponseDTO appointmentResponseDTO = appointmentServices.findById(id);
         return ResponseEntity.ok(appointmentResponseDTO);
     }
 
-    @PostMapping("/appointments")
+    @PostMapping("/appt")
     public ResponseEntity<AppointmentResponseDTO> addAppointments(@RequestBody AppointmentRequestDTO appointmentRequestDTO) {
         AppointmentResponseDTO appointment = appointmentServices.createAppointment(appointmentRequestDTO);
         return new ResponseEntity<>(appointment, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/appointments{id}")
+    @DeleteMapping("/appt{id}")
     public ResponseEntity<?> deleteAppointments(@PathVariable Long id) {
         appointmentServices.deleteById(id);
         return new ResponseEntity<>("Deleted successfully! ", HttpStatus.OK);
     }
 
-    @PutMapping("/appointments{id}")
+    @PutMapping("/appt{id}")
     public ResponseEntity<AppointmentResponseDTO> updateAppointments(@PathVariable Long id, @RequestBody AppointmentRequestDTO appointmentRequestDTO) {
        try{
            AppointmentResponseDTO updatedAppointment = appointmentServices.updateAppointmentsServices(id, appointmentRequestDTO);

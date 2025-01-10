@@ -23,8 +23,7 @@ public class AppointmentServices {
     private final AppointmentsRepository appointmentsRepository;
     private final PetRepository petRepository;
 
-    public AppointmentServices(AppointmentsRepository appointmentsRepository,
-                               PetRepository petRepository) {
+    public AppointmentServices(AppointmentsRepository appointmentsRepository, PetRepository petRepository) {
         this.appointmentsRepository = appointmentsRepository;
         this.petRepository = petRepository;
     }
