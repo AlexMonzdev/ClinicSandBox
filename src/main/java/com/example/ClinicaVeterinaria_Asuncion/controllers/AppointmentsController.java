@@ -25,18 +25,18 @@ public class AppointmentsController {
 
     }
 
-    @GetMapping("/appt")
+    @GetMapping("/appointments")
     public ResponseEntity<List<AppointmentResponseDTO>> getAllAppointments() {
         return ResponseEntity.ok(appointmentServices.getAllAppointments());
     }
 
-    @GetMapping("/appt/{id}")
+    @GetMapping("/appointments/{id}")
     public ResponseEntity<AppointmentResponseDTO> getAppointmentById(@PathVariable Long id) {
         AppointmentResponseDTO appointmentResponseDTO = appointmentServices.findById(id);
         return ResponseEntity.ok(appointmentResponseDTO);
     }
 
-    @PostMapping("/appt")
+    @PostMapping("/appointments")
     public ResponseEntity<AppointmentResponseDTO> addAppointments(@RequestBody AppointmentRequestDTO appointmentRequestDTO) {
         AppointmentResponseDTO appointment = appointmentServices.createAppointment(appointmentRequestDTO);
         return new ResponseEntity<>(appointment, HttpStatus.CREATED);
