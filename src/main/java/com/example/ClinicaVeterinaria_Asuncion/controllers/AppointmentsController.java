@@ -42,13 +42,13 @@ public class AppointmentsController {
         return new ResponseEntity<>(appointment, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/appt{id}")
+    @DeleteMapping("/appointments{id}")
     public ResponseEntity<?> deleteAppointments(@PathVariable Long id) {
         appointmentServices.deleteById(id);
         return new ResponseEntity<>("Deleted successfully! ", HttpStatus.OK);
     }
 
-    @PutMapping("/appt{id}")
+    @PutMapping("/appointments{id}")
     public ResponseEntity<AppointmentResponseDTO> updateAppointments(@PathVariable Long id, @RequestBody AppointmentRequestDTO appointmentRequestDTO) {
        try{
            AppointmentResponseDTO updatedAppointment = appointmentServices.updateAppointmentsServices(id, appointmentRequestDTO);
