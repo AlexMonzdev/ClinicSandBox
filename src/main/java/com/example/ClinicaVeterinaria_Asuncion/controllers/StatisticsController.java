@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/clinic")
+@RequestMapping("/api/v1")
 public class StatisticsController {
 
     private final StatisticsService statisticsService;

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/clinic")
+@RequestMapping("/api/v1")
 public class AppointmentsController {
 
     private final AppointmentServices appointmentServices;

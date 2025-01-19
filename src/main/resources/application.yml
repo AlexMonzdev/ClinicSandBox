@@ -1,4 +1,12 @@
+server:
+  port: 8080
+
 spring:
+  security:
+    user:
+      name: admin
+      password: 1234
+      roles: ADMIN
   profiles:
     active: test
 

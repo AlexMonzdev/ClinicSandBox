@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/clinic")
+@RequestMapping("/api/v1")
 public class GuardianController {
 
     private final GuardianServices  guardianServices;

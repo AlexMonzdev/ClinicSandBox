@@ -65,3 +65,6 @@ INSERT INTO appointment (local_date, local_time, reason, id_pet) VALUES
 ('2023-12-14', '09:00:00', 'Post-Op Check', 7),
 ('2023-12-14', '10:15:00', 'Diet Consultation', 8),
 ('2023-12-15', '11:45:00', 'Vaccination', 9);
+
+INSERT INTO `user` (`password`, `role`, `username`)
+VALUES ('1234', 'ROLE_USER', 'admin');

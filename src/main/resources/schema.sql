@@ -25,5 +25,16 @@ CREATE TABLE appointment (
     CONSTRAINT fk_pet FOREIGN KEY (id_pet) REFERENCES pet(id)
 );
 
+CREATE TABLE `user` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `password` varchar(255) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+
+
+
 
 
