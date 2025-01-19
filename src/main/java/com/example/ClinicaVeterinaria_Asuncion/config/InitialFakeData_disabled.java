@@ -16,7 +16,7 @@ import java.time.LocalDate;
 //@Configuration
 public class InitialFakeData_disabled {
 
-
+/*
     @Autowired
     GuardianRepository guardianRepository;
     PetRepository petRepository;
@@ -47,6 +47,6 @@ public class InitialFakeData_disabled {
 
         };
     }
-
+*/
 }
 
